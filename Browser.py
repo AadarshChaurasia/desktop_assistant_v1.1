@@ -4,7 +4,6 @@ except:
 	pass
 
 
-# done
 def show_info_about(query,lines=5):
 	if 'show info about' in query:
 		query = query[16:]
@@ -18,7 +17,6 @@ def show_info_about(query,lines=5):
 	info = kit.info(query,lines)
 	return info
 
-# done
 def search_on_google(data):
 	words = data.split(' ')
 	extra_words = ['search', 'in', 'on', 'for', 'about', 'related', 'to', 'krna', 'kro',

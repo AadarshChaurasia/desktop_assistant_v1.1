@@ -10,17 +10,14 @@ class Keyboard():
 		super(Keyboard, self).__init__()
 
 
-	# @staticmethod
 	def speech_to_text(self,audio,name):
 		''' save input ina text file in same directory '''
 		name = name+'.txt'
 		with open(name,'a') as f:
 			f.write(audio)
 
-		# path = os.getcwd()
-		# path = path+"\\"+name
 		startfile(getcwd()+'\\'+name)
-		# Popen([name])
+
 
 		pg.typewrite(audio)
 	def write(self,data):
@@ -37,7 +34,7 @@ class Keyboard():
 		except:
 			pg.hotkey(keys[0],keys[1])
 
-def start_software(software):                                        # Done
+def start_software(software):                                        
 	''' start any software (by search automation) '''
 	pg.click(109,748)
 	time.sleep(6)
@@ -47,7 +44,7 @@ def start_software(software):                                        # Done
 
 
 
-def wifi():                                                          # Done
+def wifi():                                                         
 	''' Connect or disconnect wifi '''
 	pg.click(1174, 749)
 	print('clicked')
@@ -62,6 +59,5 @@ def wifi():                                                          # Done
 
 		
 if __name__ == '__main__':
-	# keyboard = Keyboard()
-	# keyboard.speech_to_text('csdj','try')
+
 	wifi()
